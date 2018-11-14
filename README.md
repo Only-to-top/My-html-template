@@ -1,4 +1,4 @@
 # My-html-template
 
-libs: bootstrap-reboot, bootstrap-grid <br>
-sass: _vars, _fonts
+<b>libs:</b> bootstrap-reboot, bootstrap-grid <br>
+<b>sass:</b> _vars, _fonts
