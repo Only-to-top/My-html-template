@@ -1,6 +1,11 @@
 # My-html-template
 
-<b>sass:</b> _vars, _fonts
-<b>libs:</b> bootstrap-reboot, bootstrap-grid, equalheigts <br>
+<b>sass:</b> _vars, _fonts <br>
+<b>libs:</b>
+<ul>
+  <li>bootstrap-reboot</li>
+  <li>bootstrap-grid</li>
+  <li>equalheigts</li>
+ </ul>
 
 <b>js:</b> scroll to
