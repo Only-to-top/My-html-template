@@ -2,7 +2,8 @@
 
 <b>sass:</b> _vars, _fonts <br>
 
-<ul><b>libs:</b>
+<b>libs:</b>
+<ul>
   <li>bootstrap-reboot</li>
   <li>bootstrap-grid</li>
   <li>equalheigts</li>
