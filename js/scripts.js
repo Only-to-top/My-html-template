@@ -1,21 +1,27 @@
 $(function() {
 
-	// $('.element').equalHeights();
-	
-	$("#element, #element2").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-		top = $(id).offset().top;
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
-	});
-	
-	swal({
-		title: 'Сообщение отправлено',
-		type: 'success',
-	});
+  //E-mail Ajax Send
+  $(".main-form").submit(function() {
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      // url: "/wp-content/themes/itres/mail.php", //for WP
+      data: th.serialize()
+    }).done(function() {
+      // alert("Спасибо! Сообщение отправлено!");
+      swal({
+        title: 'Сообщение отправлено',
+        type: 'success',
+      });
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+
+  // $('.element').equalHeights();
 
 });
