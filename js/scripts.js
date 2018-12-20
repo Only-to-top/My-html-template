@@ -22,6 +22,8 @@ $(function() {
     return false;
   });
 
-  // $('.element').equalHeights();
+//   if(document.documentElement.clientWidth > 768) {
+//     $('.class').equalHeights();
+//   }
 
 });
