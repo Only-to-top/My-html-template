@@ -28,6 +28,39 @@
 
 <body>
 
+<noindex>
+<div class="container">
+
+  <form class="main-form">
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="site.ru">
+    <!-- <input type="hidden" name="admin_email" value="admin@gmail.com"> -->
+    <input type="hidden" name="admin_email" value="<?php echo get_option('admin_email') ?>"> <!-- WP get email-->
+    <input type="hidden" name="form_subject" value="Форма с подвала сайта smartfarms.ru">
+    <!-- END Hidden Required Fields -->
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6">
+        <input type="text" name="Имя" placeholder="Имя*">
+        <input type="tel" name="Телефон" placeholder="Телефон">
+        <input type="email" name="E-mail" placeholder="E-mail*">
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <textarea name="Собщение" placeholder="Собщение"></textarea>
+      </div>
+
+      <div class="col-12 tac">
+        <button class="btn">Отправить</button>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+</noindex>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
