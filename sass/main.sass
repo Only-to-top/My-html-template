@@ -1,25 +1,24 @@
 @import "vars"
 @import "fonts"
 
-::placeholder
-  color: #666
-
 ::selection
   background-color: $accent
   color: #fff
 
-input::-webkit-input-placeholder
-  color: #646464
-  opacity: 1
-input:-moz-placeholder
-  color: #646464
-  opacity: 1
-input::-moz-placeholder
-  color: #646464
-  opacity: 1
-input:-ms-input-placeholder
-  color: #646464
-  opacity: 1
+::placeholder
+  color: #666
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
 
 select:focus,
 select:hover,
@@ -31,9 +30,9 @@ option:focus,
   outline: none
   border: transparent
   
-button:focus,
-a:focus
-  outline: none
+button, a
+  &:focus
+    outline: none
 
 body
   font-size: 16px
@@ -48,14 +47,15 @@ body
     outline: none
     &:focus:required:invalid
       border-color: red
+      color: 666
     &:required:valid
       border-color: green
+      color: 666
     
  @media only screen and (max-width: 576px)
   .container
     overflow-x: hidden
-  
-    
+ 
 .img-resp
   display: block
   max-width: 100%
@@ -65,11 +65,12 @@ body
 
 .tac
   text-align: center
+.tar
+  text-align: right
 
 b, strong
   font-weight: bold
-  
-  
+
 .close
   position: absolute
   right: 10px
