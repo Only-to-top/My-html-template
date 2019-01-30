@@ -71,6 +71,28 @@ body
 
 b, strong
   font-weight: bold
+  
+// Навигация карусели
+.slick-prev:before, .slick-next:before
+  content: "\f104"
+  font: normal normal normal 14px/1 FontAwesome
+  color: $accent
+  font-size: 40px
+.slick-next, .slick-prev
+  width: 30px
+  height: 30px
+.slick-next
+  transform: rotate(180deg) 
+
+@media only screen and (max-width : 576px)
+  .slick-prev
+    left: 0
+  .slick-next
+    right: 0
+  section
+    overflow-x: hidden
+// /Навигация карусели
+  
 
 .close
   position: absolute
