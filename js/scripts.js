@@ -25,5 +25,21 @@ $(function() {
 //   if(document.documentElement.clientWidth > 768) {
 //     $('.class').equalHeights();
 //   }
+  
+//   $('.slider-organizations').slick({
+//     dots: false,
+//     nav: true,
+//     infinite: true,
+//     speed: 300,
+//     adaptiveHeight: true,
+//     slidesToShow: 4,
+//     slidesToScroll: 1,
+//     responsive: [
+//       { breakpoint: 1200, settings: {slidesToShow: 3} },
+//       { breakpoint: 992, settings: {slidesToShow: 3} },
+//       { breakpoint: 768, settings: {slidesToShow: 2} },
+//       { breakpoint: 480, settings: {slidesToShow: 1} }
+//     ]
+//   });
 
 });
