@@ -21,6 +21,28 @@ $(function() {
     });
     return false;
   });
+  
+  /* * * * * * * * * Форма * * * * * * * */
+  // Открыть всплывающее окно с формой
+  $('.popup').click(function(){
+    $('.popup-wrap').fadeIn();
+    $(".popup-wrap .title").html($(this).text()); //текст ссылки вставляем в название модального окна
+  });
+
+  //Скрываем при нажатии на 'close'
+  $('.popup-wrap .close').click(function(){
+    $('.popup-wrap').fadeOut();
+  });
+
+  // Скрываем блок текста при клике вне его
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+    var div = $(".main-form"); // тут указываем ID/class элемента
+    // если клик был не по нашему блоку и не по его дочерним элементам
+    if (!div.is(e.target) && div.has(e.target).length === 0) { 
+      div.parent().parent().fadeOut(); // скрываем его
+    }
+  });
+  /* * * * * * * * * /Форма * * * * * * * */
 
 //   if(document.documentElement.clientWidth > 768) {
 //     $('.class').equalHeights();
