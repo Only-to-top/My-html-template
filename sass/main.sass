@@ -94,21 +94,23 @@ b, strong
 // /Навигация карусели
   
 
-.close
-  position: absolute
-  right: 10px
-  top: 10px
-  width: 40px
-  height: 40px
-  background: url('../img/close.svg') no-repeat center
-  background-size: 40px
-  cursor: pointer
-
 // форма
+.popup-wrap
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  background-color: rgba(0,0,0,.9)
 .main-form
   max-width: 555px
-  margin: 30px auto
-  display: none
+  background-color: #fff
+  padding: 20px
+  transform: translate(-50%, -50%)
+  left: 50%
+  top: 50%
+  position: absolute
   input, textarea
     width: 100%
     margin-bottom: 30px
@@ -132,7 +134,20 @@ b, strong
     text-transform: uppercase
     font-weight: bold
     cursor: pointer
+  .title
+    color: $text
+    margin-bottom: 20px
 // форма END
+
+.close
+  position: absolute
+  right: 10px
+  top: 10px
+  width: 40px
+  height: 40px
+  background: url('../img/close.svg') no-repeat center
+  background-size: 40px
+  cursor: pointer
 
 
 
