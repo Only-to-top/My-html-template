@@ -1,4 +1,7 @@
 $(function() {
+  
+  var doc = $(document);
+  var win = $(windows);
 
   //E-mail Ajax Send
   $(".main-form").submit(function() {
@@ -10,10 +13,7 @@ $(function() {
       data: th.serialize()
     }).done(function() {
       // alert("Спасибо! Сообщение отправлено!");
-      swal({
-        title: 'Сообщение отправлено',
-        type: 'success',
-      });
+      swal({ title: 'Сообщение отправлено', type: 'success' });
       setTimeout(function() {
         // Done Functions
         th.trigger("reset");
@@ -35,7 +35,7 @@ $(function() {
   });
 
   // Скрываем блок текста при клике вне его
-  $(document).mouseup(function (e){ // событие клика по веб-документу
+  doc.mouseup(function (e){ // событие клика по веб-документу
     var div = $(".main-form"); // тут указываем ID/class элемента
     // если клик был не по нашему блоку и не по его дочерним элементам
     if (!div.is(e.target) && div.has(e.target).length === 0) { 
