@@ -63,5 +63,11 @@ $(function() {
 //       { breakpoint: 480, settings: {slidesToShow: 1} }
 //     ]
 //   });
+  
+  $("#element, #element2").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'), top = $(id).offset().top;
+    $('body, html').animate({scrollTop: top}, 1500);
+  });
 
 });
