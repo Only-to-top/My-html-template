@@ -1,0 +1,30 @@
+// Навигация карусели
+
+.slick-prev:before, .slick-next:before
+  content: "\f104"
+  font: normal normal normal 14px/1 FontAwesome
+  color: $accent
+  font-size: 40px
+  //content: ""
+  //width: 45px
+  //height: 21px
+  //display: block
+  //background: url('../img/nav/left.png') no-repeat center
+  
+.slick-next:before
+  content: "\f105"
+  //background: url('../img/nav/right.png') no-repeat center
+  
+.slick-next, .slick-prev
+  width: 30px
+  height: 30px
+
+@media only screen and (max-width : 576px)
+  .slick-prev
+    left: 0
+  .slick-next
+    right: 0
+  section
+    overflow-x: hidden
+    
+// /Навигация карусели
