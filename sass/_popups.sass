@@ -1,17 +1,25 @@
+@import "vars"
+#main-modal
+  border-radius: 15px
+  box-shadow: 0 0 20px rgba(0,0,0,.3)
 // форма
 .main-form
-  max-width: 555px
+  max-width: 730px
   background-color: #fff
   padding: 20px
   border-radius: 10px
+  overflow: hidden
   input, textarea
     width: 100%
+    max-width: 350px
+    margin: auto
+    display: block
     margin-bottom: 30px
     padding: 15px 20px
-    background-color: #f3f3f3
-    border: 1px solid $accent
+    border-radius: 10em
+    border: 1px solid #999
     &::placeholder
-      color: #231f20!important
+      color: #999!important
       opacity: 1
   textarea
     height: 100%
@@ -20,15 +28,48 @@
     margin-top: 30px
     border: none
     width: 100%
+    margin: auto
+    display: block
     background-color: $accent
     padding: 15px
-    font-size: 18px
-    color: #fff
-    text-transform: uppercase
+    font-size: 16px
+    color: $text
     font-weight: bold
     cursor: pointer
+    padding: 15px 20px
+    border-radius: 10em
+    max-width: 350px
+    margin-bottom: 20px
   .title
     color: $text
-    margin-bottom: 20px
+    margin-bottom: 35px
     padding: 0 30px
-// форма END
+    font-size: 24px
+    font-family: MontserratBold, sans-serif
+
+.fancybox-bg
+  background: rgba(0,0,0,.1)
+
+.fancybox-button svg
+  width: 50px
+  height: 50px
+
+.fancybox-content
+  overflow-x: hidden
+
+.fancybox-slide--html .fancybox-close-small
+  color: #999
+  right: 13px
+  top: -10px
+
+.fancybox-lock
+  overflow: hidden
+  margin-right:0 !important
+
+.fancybox-lock .fancybox-overlay
+  overflow: hidden
+  overflow-y: hidden
+
+body.compensate-for-scrollbar
+  overflow-y: auto
+
