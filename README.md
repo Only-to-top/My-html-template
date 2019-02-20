@@ -8,6 +8,8 @@
   <li>bootstrap-grid</li>
   <li>equalheigts</li>
   <li>SweetAlert2</li>
+  <li>slick slider</li>
+  <li>fancybox</li>
  </ul>
 
 <b>js:</b> scroll to
