@@ -2,6 +2,10 @@ $(function() {
   
   var doc = $(document);
   var win = $(windows);
+  
+  $('[data-fancybox="email"]').fancybox({
+    animationEffect: 'zoom-in-out',
+  });
 
   //E-mail Ajax Send
   $(".main-form").submit(function() {
