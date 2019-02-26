@@ -3,7 +3,7 @@ $(function() {
   var doc = $(document);
   var win = $(windows);
   
-  $('[data-fancybox="email"]').fancybox({
+  $('[data-fancybox=""]').fancybox({
     animationEffect: 'zoom-in-out',
   });
 
