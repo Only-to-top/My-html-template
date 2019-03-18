@@ -1,8 +1,5 @@
 $(function() {
   
-  var doc = $(document);
-  var win = $(windows);
-  
   $('[data-fancybox=""]').fancybox({
     animationEffect: 'zoom-in-out',
   });
@@ -38,19 +35,24 @@ $(function() {
     $('.popup-wrap').fadeOut();
   });
 
-  // Скрываем блок текста при клике вне его
-  doc.mouseup(function (e){ // событие клика по веб-документу
-    var div = $(".main-form"); // тут указываем ID/class элемента
-    // если клик был не по нашему блоку и не по его дочерним элементам
-    if (!div.is(e.target) && div.has(e.target).length === 0) { 
-      div.parent().parent().fadeOut(); // скрываем его
-    }
-  });
+  
   /* * * * * * * * * /Форма * * * * * * * */
 
-//   if(document.documentElement.clientWidth > 768) {
+//   if ( $(window).width() < 768 ) {
+    
 //     $('.class').equalHeights();
+
+//     // Скрываем блок текста при клике вне его
+//     $(document).mouseup(function (e){ // событие клика по веб-документу
+//       var div = $(".main-form"); // тут указываем ID/class элемента
+//       // если клик был не по нашему блоку и не по его дочерним элементам
+//       if (!div.is(e.target) && div.has(e.target).length === 0) { 
+//         div.parent().parent().fadeOut(); // скрываем его
+//       }
+//     });
+    
 //   }
+
   
 //   $('.slider-organizations').slick({
 //     dots: false,
