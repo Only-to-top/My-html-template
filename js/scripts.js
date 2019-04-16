@@ -1,5 +1,9 @@
 $(function() {
   
+  $('.hamburger').click(function(){
+    $(this).toggleClass('is-active');
+  });
+  
   $('[data-fancybox=""]').fancybox({
     animationEffect: 'zoom-in-out',
   });
