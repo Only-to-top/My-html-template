@@ -32,10 +32,26 @@
 </head>
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-<a data-src="#hidden-content-songle-email" data-fancybox="" data-type="inline" class="btn btn-accent">Оставить заявку</a>
-  
-<!-- slider -->
+<!-- <a data-src="#main-form" data-fancybox="" data-type="inline" class="btn btn-accent">Оставить заявку</a> -->
+
+
 <div class="header-swiper-container">
 
   <div class="swiper-wrapper">
@@ -55,41 +71,45 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
-  
 
 </div><!-- / slider -->
-  
+
+
 <noindex>
-  <div class="container">
-  <div class="title tac">Оставьте заявку и мы вам перезвоним</div>
-    <form class="main-form">
+
+  <form class="main-form" id="main-form">
+
+    <div class="container">
+      <div class="title tac">Оставьте заявку и мы вам перезвоним</div>
+  
       <!-- Hidden Required Fields -->
       <input type="hidden" name="project_name" value="site.ru">
       <!-- <input type="hidden" name="admin_email" value="admin@gmail.com"> -->
       <input type="hidden" name="admin_email" value="<?php echo get_option('admin_email') ?>"> <!-- WP get email-->
       <input type="hidden" name="form_subject" value="Форма с подвала сайта smartfarms.ru">
       <!-- END Hidden Required Fields -->
-
+  
       <div class="row">
-
+  
         <div class="col-sm-12 col-md-6">
           <input type="text" name="Имя" placeholder="Имя">
           <input type="tel" name="Телефон" placeholder="Телефон">
           <input type="email" name="E-mail" placeholder="E-mail*" required>
         </div>
-
+  
         <div class="col-sm-12 col-md-6">
           <textarea name="Собщение" placeholder="Собщение"></textarea>
         </div>
-
+  
         <div class="col-12 tac">
           <button class="btn-send-form">Отправить</button>
         </div>
-
-      </div>
-    </form>
-
+  
+      </div><!-- / row -->
     </div>
+
+  </form>
+
 </noindex>
 
 
