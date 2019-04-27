@@ -27,21 +27,20 @@ $(function() {
     return false;
   });
   
+  $('.btn-send-form').click(function(){
+    if ( $('form input[type=checkbox]').is(':checked') ) {
+      $('form .checkbox-new').removeClass('red');
+    } else
+      $('form .checkbox-new').addClass('red');
+  });
+  
   /* * * * * * * * * Форма * * * * * * * */
   // Открыть всплывающее окно с формой
   $('.popup').click(function(){
     $('.popup-wrap').fadeIn();
     $(".popup-wrap .title").html($(this).text()); //текст ссылки вставляем в название модального окна
   });
-
-  //Скрываем при нажатии на 'close'
-  $('.popup-wrap .close').click(function(){
-    $('.popup-wrap').fadeOut();
-  });
-
   
-  /* * * * * * * * * /Форма * * * * * * * */
-
 //   if ( $(window).width() < 768 ) {
     
 //     $('.class').equalHeights();
@@ -56,6 +55,7 @@ $(function() {
 //     });
     
 //   }
+
 
   
   var swiper = new Swiper('.header-swiper-container', {
