@@ -41,20 +41,22 @@ $(function() {
     $(".popup-wrap .title").html($(this).text()); //текст ссылки вставляем в название модального окна
   });
   
-//   if ( $(window).width() < 768 ) {
+  if ( $(window).width() < 768 ) {
     
-//     $('.class').equalHeights();
+    $('.class').equalHeights();
 
-//     // Скрываем блок текста при клике вне его
-//     $(document).mouseup(function (e){ // событие клика по веб-документу
-//       var div = $(".main-form"); // тут указываем ID/class элемента
-//       // если клик был не по нашему блоку и не по его дочерним элементам
-//       if (!div.is(e.target) && div.has(e.target).length === 0) { 
-//         div.parent().parent().fadeOut(); // скрываем его
-//       }
-//     });
+    if ( $('.main-form').css('display', 'block') ) {
+      // Скрываем блок текста при клике вне его
+      $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".main-form"); // тут указываем ID/class элемента
+        // если клик был не по нашему блоку и не по его дочерним элементам
+        if (!div.is(e.target) && div.has(e.target).length === 0) { 
+          div.parent().parent().fadeOut(); // скрываем его
+        }
+      });
+    }
     
-//   }
+  }
 
 
   
