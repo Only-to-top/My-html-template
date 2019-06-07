@@ -13,8 +13,7 @@ $(function() {
     var th = $(this);
     $.ajax({
       type: "POST",
-      url: "mail.php", //Change
-      // url: "/wp-content/themes/itres/mail.php", //for WP
+      url: "mail.php",
       data: th.serialize()
     }).done(function() {
       // alert("Спасибо! Сообщение отправлено!");
