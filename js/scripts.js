@@ -1,6 +1,6 @@
 jQuery(function() {
   
-  $('.hamburger').click(function(){
+  $('.hamburger').on('click', function() {
     $(this).toggleClass('is-active');
   });
   
@@ -9,7 +9,7 @@ jQuery(function() {
   });
 
   //E-mail Ajax Send
-  $(".main-form").submit(function() {
+  $(".main-form").on('submit', function() {
     var th = $(this);
     $.ajax({
       type: "POST",
@@ -26,7 +26,7 @@ jQuery(function() {
     return false;
   });
   
-  $('.btn-send-form').click(function(){
+  $('.btn-send-form').on('click', function(){
     if ( $('form input[type=checkbox]').is(':checked') ) {
       $('form .checkbox-new').removeClass('red');
     } else
@@ -92,7 +92,7 @@ jQuery(function() {
   });
 
   
-  $("#element, #element2").on("click","a", function (event) {
+  $("#element, #element2").on("click", "a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'), top = $(id).offset().top;
     $('body, html').animate({scrollTop: top}, 1500);
