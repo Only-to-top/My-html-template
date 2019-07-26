@@ -1,6 +1,6 @@
 jQuery(function() {
   
-  $('.hamburger').on('click', function() {
+  $(document).on('click', '.hamburger', function() {
     $(this).toggleClass('is-active');
   });
   
@@ -9,7 +9,7 @@ jQuery(function() {
   });
 
   //E-mail Ajax Send
-  $(".main-form").on('submit', function() {
+  $(document).on('submit', '.main-form', function() {
     var th = $(this);
     $.ajax({
       type: "POST",
