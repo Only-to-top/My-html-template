@@ -12,7 +12,7 @@ $form_subject = trim($_POST["form_subject"]);
 
 foreach ( $_POST as $key => $value ) {
   if ( is_array($value) ) {
-    $value = implode(" ", $value);
+    $value = implode(", ", $value);
   }
   if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
     $message .= "
