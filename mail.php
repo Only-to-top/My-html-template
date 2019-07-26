@@ -11,6 +11,9 @@ $admin_email  = trim($_POST["admin_email"]);
 $form_subject = trim($_POST["form_subject"]);
 
 foreach ( $_POST as $key => $value ) {
+  if ( is_array($value) ) {
+    $value = implode(" ", $value);
+  }
   if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
     $message .= "
     " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
