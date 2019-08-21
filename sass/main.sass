@@ -2,125 +2,126 @@
 @import "fonts"
 
 ::selection
-  background-color: $accent
-  color: #fff
+    background-color: $accent
+    color: #fff
 
 ::placeholder
-  color: #666
+    color: #1d1d1d
+    font-weight: 500
 
 select:focus,
 select:hover,
 option:hover,
 option:focus,
 .form-control:focus,
-  box-shadow: none!important
-  border: none
-  outline: none
-  border: transparent
-  
-select[disabled]
-  cursor: not-allowed
-  
-label
-  user-select: none
-  
-button, a, * [role="button"]
-  &:focus
+    box-shadow: none!important
+    border: none
     outline: none
-  
+    border: transparent
+
+select[disabled]
+    cursor: not-allowed
+
+label
+    user-select: none
+
+button, a, * [role="button"]
+    &:focus
+      outline: none
+
 // дефолтный стиль оформления ссыслок
 a[href]:not([class])
-  color: #008000
-  text-decoration: underline
+    color: #008000
+    text-decoration: underline
 
 body
-  font-size: 16px
-  min-width: 320px
-  position: relative
-  line-height: 1.65
-  font-family: $defaultFont
-  overflow-x: hidden
-  color: $text
-  input, textarea
-    border: #666 1px solid
-    outline: none
-    &:invalid
-      box-shadow: none
-      border-color: #666
-    &:valid
-      box-shadow: none
-      border-color: #666
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.65
+    font-family: $defaultFont
+    overflow-x: hidden
+    color: $text
+    input, textarea
+        // border: #666 1px solid
+        outline: none
+        &:invalid
+            box-shadow: none
+            border-color: #666
+        &:valid
+            box-shadow: none
+            border-color: #666
 
-    &:focus:valid
-      border-color: #666
-      color: #666
-      box-shadow: none
-    &:focus:invalid
-      box-shadow: none
-      border-color: #666
-      color: #666
+        &:focus:valid
+            border-color: #666
+            color: #666
+            box-shadow: none
+        &:focus:invalid
+            box-shadow: none
+            border-color: #666
+            color: #666
 
-    &:focus:required:valid
-      border-color: #666
-      color: #666
-      box-shadow: none
-    &:focus:required:invalid
-      border-color: #666
-      color: #666
-      box-shadow: none
+        &:focus:required:valid
+            border-color: #666
+            color: #666
+            box-shadow: none
+        &:focus:required:invalid
+            border-color: #666
+            color: #666
+            box-shadow: none
     
 input[type="number"]
-  -moz-appearance: textfield
+    -moz-appearance: textfield
 
 input[type="number"]:focus,
 input[type="number"]:hover
-  -moz-appearance: number-input
-    
+    -moz-appearance: number-input
+
 
 @media only screen and (max-width: 576px)
-  .container
-    overflow: hidden
- 
+    .container
+        overflow: hidden
+
 .img-resp
-  display: block
-  max-width: 100%
-  height: auto
-  &.img-width
-    width: 100%
+    display: block
+    max-width: 100%
+    height: auto
+    &.img-width
+        width: 100%
 
 .tac
-  text-align: center
+    text-align: center
 .tar
-  text-align: right
+    text-align: right
 
 b, strong
-  font-weight: bold
+    font-weight: bold
 
 
-
-// write there
+.container-fluid
+    max-width: 1660px
 
 
 
 
 /* Large (.col-lg-) */
 @media only screen and (max-width : 1200px)
-  /**/
+    /**/
 
 
 /* Medium (.col-md-) */
 @media only screen and (max-width : 992px)
-  /**/
+    /**/
 
 
 /* Small (.col-sm-) */
 @media only screen and (max-width : 768px)
-  /**/
+    /**/
 
 
 /* Extra Small (.col-) */
 @media only screen and (max-width : 576px)
-  /**/
+    /**/
 
 @import "forms"
 @import "sliders"
