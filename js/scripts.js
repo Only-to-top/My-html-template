@@ -32,8 +32,7 @@ jQuery(function() {
     } else
       $('form .checkbox-new').addClass('red');
   });
-  
-  /* * * * * * * * * Форма * * * * * * * */
+
   // Открыть всплывающее окно с формой
   $('.popup').click(function(){
     $('.popup-wrap').fadeIn();
@@ -57,36 +56,42 @@ jQuery(function() {
 
   // slider
   var swiper = new Swiper('.header-swiper-container', {
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
-    pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
-    autoplay: { delay: 3500, disableOnInteraction: false, },
-    spaceBetween: 30, // расст-е м-у слайдами
-    grabCursor: true, // рука
-    loop: true,
-    mousewheel: true, // прокрутка колесом
-    slidesPerView: 2, // кол-во слайдов
-    // effect: 'fade', // для slidesPerView: 1
-    // centeredSlides: true, //центрировать
-    // lazy: true,
-    breakpoints: {
-      1200: { // < 1200
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      992: { // < 1024
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
-      768: { // < 768
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      576: { // < 768
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-    }
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
+      pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
+      autoplay: { delay: 3500, disableOnInteraction: false, },
+      spaceBetween: 30, // расст-е м-у слайдами
+      grabCursor: true, // рука
+      loop: true,
+      mousewheel: true, // прокрутка колесом
+      slidesPerView: 2, // кол-во слайдов
+      // effect: 'fade', // для slidesPerView: 1
+      // centeredSlides: true, //центрировать
+      // lazy: true,
+      breakpoints: {
+        1200: { // < 1200
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        992: { // < 1024
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        768: { // < 768
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        576: { // < 768
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      }
   });
+  
+    $(".header-swiper-container").hover(function() {
+        (this).swiper.autoplay.stop();
+    }, function() {
+        (this).swiper.autoplay.start();
+    });
 
   
   $("#element, #element2").on("click", "a", function (event) {
