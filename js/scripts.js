@@ -1,8 +1,32 @@
 jQuery(function() {
   
+    const menu = $('.top-menu');
+
     $(document).on('click', '.hamburger', function() {
-      $(this).toggleClass('is-active');
+        if ( $(this).hasClass('is-active') ) {
+            $(this).removeClass('is-active');
+            menu.slideUp();
+        } else {
+            $(this).addClass('is-active');
+            menu.slideDown();
+        }
     });
+
+    if ( $(window).width() < 992 ) {
+        //Скрыть блок при клике вне его
+        $(document).mouseup(function (e) {
+            const hamburger = $('.hamburger');
+
+            if ( (menu.has(e.target).length === 0) && (hamburger.has(e.target).length === 0) ) {
+
+                menu.slideUp();
+
+                if ( hamburger.hasClass('is-active') ) {
+                    hamburger.removeClass('is-active');
+                };
+            };
+        });
+    };
 
     $('[data-fancybox=""]').fancybox({
       animationEffect: 'zoom-in-out',
@@ -10,7 +34,7 @@ jQuery(function() {
 
     //E-mail Ajax Send
     $(document).on('submit', '.main-form', function() {
-      var th = $(this);
+      let th = $(this);
       $.ajax({
         type: "POST",
         url: "mail.php",
