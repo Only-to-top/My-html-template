@@ -124,5 +124,8 @@ jQuery(function() {
       var id  = $(this).attr('href'), top = $(id).offset().top;
       $('body, html').animate({scrollTop: top}, 1500);
     });
+  
+  
+    $('input[type="tel"]').mask('0000-0000');
 
 });
