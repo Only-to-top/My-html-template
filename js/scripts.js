@@ -29,7 +29,13 @@ jQuery(function() {
     };
 
     $('[data-fancybox=""]').fancybox({
-      animationEffect: 'zoom-in-out',
+        animationEffect: 'zoom-in-out',
+    });
+  
+    $('[data-fancybox="gallery"]').fancybox({
+        loop: true,
+        animationEffect: "fade",
+        transitionEffect: "circular",
     });
 
     //E-mail Ajax Send
