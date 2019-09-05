@@ -51,16 +51,15 @@ jQuery(function() {
     });
   
     $('.btn-send-form').on('click', function(){
-      if ( $('form input[type=checkbox]').is(':checked') ) {
-        $('form .checkbox-new').removeClass('red');
-      } else
-        $('form .checkbox-new').addClass('red');
+        if ( $('form input[type=checkbox]').is(':checked') ) {
+            $('form .checkbox-new').removeClass('red');
+        } else
+            $('form .checkbox-new').addClass('red');
     });
 
-    // Открыть всплывающее окно с формой
-    $('.popup').click(function(){
-      $('.popup-wrap').fadeIn();
-      $(".popup-wrap .title").html($(this).text()); //текст ссылки вставляем в название модального окна
+    // Заголовок всплывающего окна = тексту кнопки
+    $('a[data-src="#main-form"]').click(function(){
+        $("#main-form .title").html( $(this).text() ); //текст ссылки вставляем в название модального окна
     });
   
     if ( $(window).width() < 768 ) {
