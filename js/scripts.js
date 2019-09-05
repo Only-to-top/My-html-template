@@ -125,5 +125,13 @@ jQuery(function() {
     });
 
     $('input[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  
+    // equal heights
+     var maxHeight = 0;
+    $("div").each(function(){
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+
+    $("div").height(maxHeight);
 
 });
