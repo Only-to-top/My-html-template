@@ -63,24 +63,24 @@ jQuery(function() {
             $('form .checkbox-new').addClass('red');
     });
 
+
     // Заголовок всплывающего окна = тексту кнопки
     $('a[data-src="#main-form"]').click(function(){
         $("#main-form .title").html( $(this).text() ); //текст ссылки вставляем в название модального окна
     });
+
   
     if ( $(window).width() < 768 ) {
 
-      $('.class').equalHeights();
+        //Скрыть блок при клике вне его
+        $(document).mouseup(function (e) {
+            var container = $(".search--show");
+            if (container.has(e.target).length === 0){
+                container.fadeOut();
+            };
+        });
 
-      //Скрыть блок при клике вне его
-      $(document).mouseup(function (e) {
-          var container = $(".search--show");
-          if (container.has(e.target).length === 0){
-              container.fadeOut();
-          };
-      });
-
-    }
+    };
 
 
     // swiper slider
@@ -133,11 +133,10 @@ jQuery(function() {
     $('input[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
   
     // equal heights
-     var maxHeight = 0;
+    var maxHeight = 0;
     $("div").each(function(){
         if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
     });
-
     $("div").height(maxHeight);
 
 });
