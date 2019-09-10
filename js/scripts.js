@@ -29,7 +29,8 @@ jQuery(function() {
     };
 
     $('[data-fancybox=""]').fancybox({
-        animationEffect: 'zoom-in-out',
+        animationEffect: 'fade',
+        animationDuration: 555,
     });
   
     $('[data-fancybox="gallery"]').fancybox({
