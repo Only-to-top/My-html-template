@@ -19,6 +19,6 @@
     <li>e-mail ajax send</li>
     <li>slider swiper</li>
     <li>equal heights</li>
-<!--     <li></li> -->
+    <li>phone input mask</li>
 <!--     <li></li> -->
 </ul>
