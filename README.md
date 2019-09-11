@@ -1,7 +1,7 @@
 # My-html-template
 
 
-<b>libs:</b>
+<b>Libs:</b>
 <ul>
     <li>bootstrap-reboot</li>
     <li>bootstrap-grid</li>
@@ -12,13 +12,13 @@
     <li>jquery.mask</li>
  </ul>
 
-<b>js:</b>
+<b>JavaScript:</b>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>menu gamburger</li>
+    <li>fancybox (+gallery)</li>
+    <li>e-mail ajax send</li>
+    <li>slider swiper</li>
+    <li>equal heights</li>
+<!--     <li></li> -->
+<!--     <li></li> -->
 </ul>
