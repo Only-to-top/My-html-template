@@ -2,13 +2,10 @@
 
 jQuery(function($) {
 
-    const greet = x => "Welcome " + x;
-    console.log(greet(4));
-
 
     // menu
     const menu = $('.classMenu');
-    const menuOpen = function(){
+    const menuOpen = function() {
         if ( $(this).hasClass('is-active') ) {
             $(this).removeClass('is-active');
             menu.slideUp();
@@ -59,22 +56,22 @@ jQuery(function($) {
 
 
     //E-mail Ajax Send
-    $(document).on('submit', '.main-form', function() {
-        let th = $(this);
+    const ajaxSend = function(e) {
+        e.preventDefault();
+        const th = $(this);
         $.ajax({
             type: "POST",
-            url: "mail.php",
+            url: "./mail.php",
             data: th.serialize()
         }).done(function() {
-            // alert("Спасибо! Сообщение отправлено!");
             $('.fancybox-close-small').click(); // close fancy popup
             swal({ title: 'Сообщение отправлено', type: 'success' });
             setTimeout(function() { // Done Functions
                 th.trigger("reset");
             }, 1000);
         });
-        return false;
-    });
+    };
+    $('.main-form').on('submit', ajaxSend);
 
 
     // Checked input type checkbox ?
