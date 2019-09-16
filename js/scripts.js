@@ -1,8 +1,11 @@
-jQuery(function() {
-  
-    const menu = $('.top-menu');
+'use strict'
 
-    $(document).on('click', '.hamburger', function() {
+jQuery(function($) {
+
+
+    // menu
+    const menuOpen = function(){
+        const menu = $('.classMenu');
         if ( $(this).hasClass('is-active') ) {
             $(this).removeClass('is-active');
             menu.slideUp();
@@ -10,15 +13,16 @@ jQuery(function() {
             $(this).addClass('is-active');
             menu.slideDown();
         }
-    });
+    };
+    $('.hamburger').on('click', menuOpen);
 
+
+    // close menu
     if ( $(window).width() < 992 ) {
-        //Скрыть блок при клике вне его
-        $(document).mouseup(function (e) {
+        $(document).mouseup(function (e) { //Скрыть меню при клике вне его
             const hamburger = $('.hamburger');
 
             if ( (menu.has(e.target).length === 0) && (hamburger.has(e.target).length === 0) ) {
-
                 menu.slideUp();
 
                 if ( hamburger.hasClass('is-active') ) {
@@ -28,16 +32,29 @@ jQuery(function() {
         });
     };
 
-    $('[data-fancybox=""]').fancybox({
+
+    // popup
+    $('[data-fancybox]').fancybox({
         animationEffect: 'fade',
         animationDuration: 555,
+        // smallBtn: false,
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+                NEXT: "Далее",
+                PREV: "Назад",
+            },
+        },
     });
-  
+
+    // popup gallery
     $('[data-fancybox="gallery"]').fancybox({
         loop: true,
         animationEffect: "fade",
         transitionEffect: "circular",
     });
+
 
     //E-mail Ajax Send
     $(document).on('submit', '.main-form', function() {
@@ -56,12 +73,15 @@ jQuery(function() {
       });
       return false;
     });
-  
+
+
+    // Checked input type checkbox ?
     $('.btn-send-form').on('click', function(){
         if ( $('form input[type=checkbox]').is(':checked') ) {
             $('form .checkbox-new').removeClass('red');
-        } else
+        } else {
             $('form .checkbox-new').addClass('red');
+        }
     });
 
 
@@ -70,17 +90,15 @@ jQuery(function() {
         $("#main-form .title").html( $(this).text() ); //текст ссылки вставляем в название модального окна
     });
 
-  
-    if ( $(window).width() < 768 ) {
 
-        //Скрыть блок при клике вне его
+    //Скрыть блок при клике вне его
+    if ( $(window).width() < 768 ) {
         $(document).mouseup(function (e) {
             var container = $(".search--show");
             if (container.has(e.target).length === 0){
                 container.fadeOut();
             };
         });
-
     };
 
 
@@ -116,13 +134,14 @@ jQuery(function() {
           },
         }
     });
-  
+
     // stop autoplay swiper on hover
     $(".header-swiper-container").hover(function() {
         (this).swiper.autoplay.stop();
     }, function() {
         (this).swiper.autoplay.start();
     });
+
 
     // scroll to top
     $("#element, #element2").on("click", "a", function (event) {
@@ -131,13 +150,16 @@ jQuery(function() {
       $('body, html').animate({scrollTop: top}, 1500);
     });
 
+
     $('input[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-  
+
+
     // equal heights
-    var maxHeight = 0;
-    $("div").each(function(){
-        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-    });
-    $("div").height(maxHeight);
+    // var maxHeight = 0;
+    // $("div").each(function(){
+    //     if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    // });
+    // $("div").height(maxHeight);
+
 
 });
