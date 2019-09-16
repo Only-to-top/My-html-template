@@ -2,6 +2,9 @@
 
 jQuery(function($) {
 
+    const greet = x => "Welcome " + x;
+    console.log(greet(4));
+
 
     // menu
     const menu = $('.classMenu');
@@ -57,20 +60,20 @@ jQuery(function($) {
 
     //E-mail Ajax Send
     $(document).on('submit', '.main-form', function() {
-      let th = $(this);
-      $.ajax({
-        type: "POST",
-        url: "mail.php",
-        data: th.serialize()
-      }).done(function() {
-        // alert("Спасибо! Сообщение отправлено!");
-        swal({ title: 'Сообщение отправлено', type: 'success' });
-        setTimeout(function() {
-          // Done Functions
-          th.trigger("reset");
-        }, 1000);
-      });
-      return false;
+        let th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: th.serialize()
+        }).done(function() {
+            // alert("Спасибо! Сообщение отправлено!");
+            $('.fancybox-close-small').click(); // close fancy popup
+            swal({ title: 'Сообщение отправлено', type: 'success' });
+            setTimeout(function() { // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
     });
 
 
