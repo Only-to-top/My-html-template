@@ -4,8 +4,8 @@ jQuery(function($) {
 
 
     // menu
+    const menu = $('.classMenu');
     const menuOpen = function(){
-        const menu = $('.classMenu');
         if ( $(this).hasClass('is-active') ) {
             $(this).removeClass('is-active');
             menu.slideUp();
@@ -15,7 +15,6 @@ jQuery(function($) {
         }
     };
     $('.hamburger').on('click', menuOpen);
-
 
     // close menu
     if ( $(window).width() < 992 ) {
