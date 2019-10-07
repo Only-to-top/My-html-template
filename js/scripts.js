@@ -4,25 +4,25 @@ jQuery(function($) {
 
 
     // menu
-    const menu = $('.classMenu');
+    const menu = $('.header-menu');
     const menuOpen = function() {
         if ( $(this).hasClass('is-active') ) {
             $(this).removeClass('is-active');
-            menu.slideUp();
+            menu.stop().slideUp();
         } else {
             $(this).addClass('is-active');
-            menu.slideDown();
+            menu.stop().slideDown();
         }
     };
     $('.hamburger').on('click', menuOpen);
 
     // close menu
-    if ( $(window).width() < 992 ) {
+    if ( $(window).width() < 768 ) {
         $(document).mouseup(function (e) { //Скрыть меню при клике вне его
             const hamburger = $('.hamburger');
 
             if ( (menu.has(e.target).length === 0) && (hamburger.has(e.target).length === 0) ) {
-                menu.slideUp();
+                menu.stop().slideUp();
 
                 if ( hamburger.hasClass('is-active') ) {
                     hamburger.removeClass('is-active');
@@ -30,28 +30,7 @@ jQuery(function($) {
             };
         });
     };
-    
-    
-    // wow
-    const menuBtn = $('.btn'),
-          menu    = $('.menu');
 
-    menuBtn.on('click', function() {
-        if ( $(this).hasClass('is-active') ) {
-            $(this).removeClass('is-active');
-            menu.slideUp();
-        } else {
-            $(this).addClass('is-active');
-            menu.slideDown();
-        }
-    });
-
-    $(document).click(function (e) {
-        if ( !menuBtn.is(e.target) && !menu.is(e.target) && menu.has(e.target).length === 0) {
-            menu.slideUp();
-            menuBtn.removeClass('is-active');
-        };
-    });
 
 
     // popup
