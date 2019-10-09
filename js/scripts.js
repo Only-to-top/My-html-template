@@ -103,37 +103,34 @@ jQuery(function($) {
 
 
     // swiper slider
-    var swiper = new Swiper('.news-swiper-container', {
-        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
-        pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
-        autoplay: { delay: 3500, disableOnInteraction: false, },
-        spaceBetween: 20, // расст-е м-у слайдами
-        grabCursor: true, // рука
-        loop: true,
-        mousewheel: true, // прокрутка колесом
-        slidesPerView: 3, // кол-во слайдов
-        // effect: 'fade', // для slidesPerView: 1
-        // centeredSlides: true, //центрировать
-        // lazy: true,
-        breakpoints: {
-          1200: { // < 1200
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          992: { // < 1024
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          768: { // < 768
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-          576: { // < 576
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-        }
-    });
+    var swiper = new Swiper('.header-swiper-container', {
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
+    // pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
+    autoplay: { delay: 4500, disableOnInteraction: false, },
+    spaceBetween: 20, // расст-е м-у слайдами
+    grabCursor: true, // рука
+    loop: true,
+    mousewheel: true, // прокрутка колесом
+    slidesPerView: 3, // кол-во слайдов
+    // effect: 'fade', // для slidesPerView: 1
+    // centeredSlides: true, //центрировать
+    // lazy: true,
+    breakpoints: {
+      1200: { // < 1200
+        slidesPerView: 2,
+      },
+      992: { // < 1024
+        slidesPerView: 2,
+      },
+      768: { // < 768
+        slidesPerView: 1,
+      },
+      576: { // < 576
+        slidesPerView: 1.5,
+        spaceBetween: 15,
+      },
+    }
+});
 
     // stop autoplay swiper on hover
     $(".header-swiper-container").hover(function() {
