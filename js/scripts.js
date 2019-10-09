@@ -103,15 +103,15 @@ jQuery(function($) {
 
 
     // swiper slider
-    var swiper = new Swiper('.header-swiper-container', {
+    var swiper = new Swiper('.news-swiper-container', {
         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
         pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
         autoplay: { delay: 3500, disableOnInteraction: false, },
-        spaceBetween: 30, // расст-е м-у слайдами
+        spaceBetween: 20, // расст-е м-у слайдами
         grabCursor: true, // рука
         loop: true,
         mousewheel: true, // прокрутка колесом
-        slidesPerView: 2, // кол-во слайдов
+        slidesPerView: 3, // кол-во слайдов
         // effect: 'fade', // для slidesPerView: 1
         // centeredSlides: true, //центрировать
         // lazy: true,
@@ -121,15 +121,15 @@ jQuery(function($) {
             spaceBetween: 40,
           },
           992: { // < 1024
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 40,
           },
           768: { // < 768
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 30,
           },
-          576: { // < 768
-            slidesPerView: 2,
+          576: { // < 576
+            slidesPerView: 1,
             spaceBetween: 20,
           },
         }
