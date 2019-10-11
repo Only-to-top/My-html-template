@@ -47,7 +47,6 @@ jQuery(function($) {
             },
         },
     });
-
     // popup gallery
     $('[data-fancybox="gallery"]').fancybox({
         loop: true,
@@ -104,34 +103,33 @@ jQuery(function($) {
 
     // swiper slider
     var swiper = new Swiper('.header-swiper-container', {
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
-    // pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
-    autoplay: { delay: 4500, disableOnInteraction: false, },
-    spaceBetween: 20, // расст-е м-у слайдами
-    grabCursor: true, // рука
-    loop: true,
-    mousewheel: true, // прокрутка колесом
-    slidesPerView: 3, // кол-во слайдов
-    // effect: 'fade', // для slidesPerView: 1
-    // centeredSlides: true, //центрировать
-    // lazy: true,
-    breakpoints: {
-      1200: { // < 1200
-        slidesPerView: 2,
-      },
-      992: { // < 1024
-        slidesPerView: 2,
-      },
-      768: { // < 768
-        slidesPerView: 1,
-      },
-      576: { // < 576
-        slidesPerView: 1.5,
-        spaceBetween: 15,
-      },
-    }
-});
-
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev', },
+        // pagination: { el: '.swiper-pagination', clickable: true, dynamicBullets: true, },
+        autoplay: { delay: 4500, disableOnInteraction: false, },
+        spaceBetween: 20, // расст-е м-у слайдами
+        grabCursor: true, // рука
+        loop: true,
+        mousewheel: true, // прокрутка колесом
+        slidesPerView: 3, // кол-во слайдов
+        // effect: 'fade', // для slidesPerView: 1
+        // centeredSlides: true, //центрировать
+        // lazy: true,
+        breakpoints: {
+          1200: { // < 1200
+            slidesPerView: 2,
+          },
+          992: { // < 1024
+            slidesPerView: 2,
+          },
+          768: { // < 768
+            slidesPerView: 1,
+          },
+          576: { // < 576
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+          },
+        }
+    });
     // stop autoplay swiper on hover
     $(".header-swiper-container").hover(function() {
         (this).swiper.autoplay.stop();
@@ -152,11 +150,23 @@ jQuery(function($) {
 
 
     // equal heights
-    // var maxHeight = 0;
-    // $("div").each(function(){
-    //     if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-    // });
-    // $("div").height(maxHeight);
+    const maxHeightEl = 0;
+    $("itemName").each(function(){
+        if ($(this).height() > maxHeightEl) { maxHeightEl = $(this).height(); }
+    });
+    $("itemName").height(maxHeightEl);
+    
+    
+    // scrolling function
+    $(window).scroll(function() {
+        
+        if ( $(window).scrollTop() > 70 ){
+            $('.header').addClass('fixed');
+        } else {
+            $('.header').removeClass('fixed');
+        }
+       
+    });
 
 
 });
