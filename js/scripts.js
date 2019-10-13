@@ -32,6 +32,10 @@ jQuery(function($) {
     };
 
 
+    // anchor link => title popup
+    $('a[data-src="#main-form"]').click(function(){
+        $("#main-form .title").html( $(this).text() ); //текст ссылки вставляем в название модального окна
+    });
 
     // popup
     $('[data-fancybox]').fancybox({
@@ -84,13 +88,7 @@ jQuery(function($) {
     });
 
 
-    // Заголовок всплывающего окна = тексту кнопки
-    $('a[data-src="#main-form"]').click(function(){
-        $("#main-form .title").html( $(this).text() ); //текст ссылки вставляем в название модального окна
-    });
-
-
-    //Скрыть блок при клике вне его
+    // hide block on click outside
     if ( $(window).width() < 768 ) {
         $(document).mouseup(function (e) {
             var container = $(".search--show");
@@ -111,9 +109,6 @@ jQuery(function($) {
         loop: true,
         mousewheel: true, // прокрутка колесом
         slidesPerView: 3, // кол-во слайдов
-        // effect: 'fade', // для slidesPerView: 1
-        // centeredSlides: true, //центрировать
-        // lazy: true,
         breakpoints: {
           1200: { // < 1200
             slidesPerView: 2,
